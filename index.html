@@ -325,7 +325,7 @@
             font-weight: 500;
         }
 
-        /* MODAL (PRICE LIST & BOOKING POPUP) */
+        /* MODAL (PRICE LIST POPUP) */
         .modal {
             display: none;
             position: fixed;
@@ -459,7 +459,7 @@
         .category-cell {
             font-weight: 600;
             color: #38bdf8;
-            width: 25%;
+            width: 30%;
             vertical-align: middle;
             border-right: 1px solid #334155;
             background-color: rgba(15, 23, 42, 0.2);
@@ -467,7 +467,7 @@
 
         .service-cell {
             color: #e2e8f0;
-            width: 45%;
+            width: 50%;
         }
 
         .amount-cell {
@@ -477,86 +477,8 @@
             width: 20%;
         }
 
-        .select-cell {
-            text-align: center;
-            width: 10%;
-        }
-
-        .select-cell input[type="checkbox"] {
-            transform: scale(1.2);
-            accent-color: #a8cf45;
-            cursor: pointer;
-        }
-
         .price-table tbody tr:nth-child(even) {
             background-color: rgba(30, 41, 59, 0.3);
-        }
-
-        /* WHATSAPP ACTION WRAPPER INSIDE MODAL */
-        .booking-action-box {
-            background: rgba(30, 41, 59, 0.9);
-            border: 1px solid #38bdf8;
-            padding: 20px;
-            border-radius: 8px;
-            margin-top: 20px;
-            text-align: center;
-        }
-
-        .booking-action-box h4 {
-            color: #38bdf8;
-            margin-bottom: 12px;
-            font-size: 16px;
-        }
-
-        .form-control-group {
-            margin-bottom: 15px;
-            text-align: left;
-        }
-
-        .form-control-group label {
-            display: block;
-            font-size: 12px;
-            color: #cbd5e1;
-            margin-bottom: 5px;
-            text-transform: uppercase;
-        }
-
-        .form-control-group input {
-            width: 100%;
-            padding: 10px 12px;
-            background: #0f172a;
-            border: 1px solid #334155;
-            color: #fff;
-            border-radius: 6px;
-            font-size: 14px;
-        }
-
-        .form-control-group input:focus {
-            outline: none;
-            border-color: #38bdf8;
-        }
-
-        .btn-whatsapp-send {
-            background: #25D366;
-            color: #fff;
-            font-weight: 600;
-            text-decoration: none;
-            padding: 12px 25px;
-            border-radius: 50px;
-            transition: 0.3s;
-            cursor: pointer;
-            border: none;
-            display: inline-flex;
-            align-items: center;
-            gap: 10px;
-            font-size: 15px;
-            width: 100%;
-            justify-content: center;
-        }
-
-        .btn-whatsapp-send:hover {
-            background: #20ba5a;
-            transform: translateY(-2px);
         }
 
         .note-box {
@@ -914,16 +836,13 @@
             }
 
             .category-cell {
-                width: 22%;
+                width: 30%;
             }
             .service-cell {
-                width: 48%;
+                width: 50%;
             }
             .amount-cell {
                 width: 20%;
-            }
-            .select-cell {
-                width: 10%;
             }
 
             .carousel-slides {
@@ -1128,7 +1047,7 @@
         </div>
     </section>
 
-    <!-- MODAL OVERLAY (PRICE LIST & SERVICE SELECTION) -->
+    <!-- MODAL OVERLAY (PRICE LIST) -->
     <div id="priceModal" class="modal" onclick="closeModalOutside(event)">
         <div class="modal-content">
             <span class="close-btn" onclick="toggleModal(false)">&times;</span>
@@ -1142,7 +1061,7 @@
                 </div>
             </div>
 
-            <h2>Select Services & Pricing Guide</h2>
+            <h2>Pricing Guide</h2>
 
             <div class="table-responsive-wrapper">
                 <table class="price-table">
@@ -1151,7 +1070,6 @@
                             <th>Category</th>
                             <th>Service Details</th>
                             <th style="text-align: right;">Amount</th>
-                            <th style="text-align: center;">Select</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -1160,22 +1078,18 @@
                             <td class="category-cell" rowspan="4">PACRA</td>
                             <td class="service-cell">Business Name</td>
                             <td class="amount-cell">K1,000</td>
-                            <td class="select-cell"><input type="checkbox" name="service" value="PACRA - Business Name (K1,000)" data-price="K1,000"></td>
                         </tr>
                         <tr>
                             <td class="service-cell">Partnership</td>
                             <td class="amount-cell">K2,000</td>
-                            <td class="select-cell"><input type="checkbox" name="service" value="PACRA - Partnership (K2,000)" data-price="K2,000"></td>
                         </tr>
                         <tr>
                             <td class="service-cell">Limited Company</td>
                             <td class="amount-cell">K3,500</td>
-                            <td class="select-cell"><input type="checkbox" name="service" value="PACRA - Limited Company (K3,500)" data-price="K3,500"></td>
                         </tr>
                         <tr>
                             <td class="service-cell">Annual Returns Service Fee</td>
                             <td class="amount-cell">K250</td>
-                            <td class="select-cell"><input type="checkbox" name="service" value="PACRA - Annual Returns Service Fee (K250)" data-price="K250"></td>
                         </tr>
 
                         <!-- ZRA -->
@@ -1183,22 +1097,18 @@
                             <td class="category-cell" rowspan="4">ZRA</td>
                             <td class="service-cell">Registration</td>
                             <td class="amount-cell">K500</td>
-                            <td class="select-cell"><input type="checkbox" name="service" value="ZRA - Registration (K500)" data-price="K500"></td>
                         </tr>
                         <tr>
                             <td class="service-cell">Monthly Service Fee (TOT)</td>
                             <td class="amount-cell">K200</td>
-                            <td class="select-cell"><input type="checkbox" name="service" value="ZRA - Monthly Service Fee (TOT) (K200)" data-price="K200"></td>
                         </tr>
                         <tr>
                             <td class="service-cell">Monthly Service Fee - PAYE</td>
                             <td class="amount-cell">K100 / Emp</td>
-                            <td class="select-cell"><input type="checkbox" name="service" value="ZRA - Monthly Service Fee - PAYE (K100 / Emp)" data-price="K100 / Emp"></td>
                         </tr>
                         <tr>
                             <td class="service-cell">Company Registration</td>
                             <td class="amount-cell">K1,000</td>
-                            <td class="select-cell"><input type="checkbox" name="service" value="ZRA - Company Registration (K1,000)" data-price="K1,000"></td>
                         </tr>
 
                         <!-- NAPSA -->
@@ -1206,17 +1116,14 @@
                             <td class="category-cell" rowspan="3">NAPSA</td>
                             <td class="service-cell">Personal</td>
                             <td class="amount-cell">K500</td>
-                            <td class="select-cell"><input type="checkbox" name="service" value="NAPSA - Personal (K500)" data-price="K500"></td>
                         </tr>
                         <tr>
                             <td class="service-cell">Monthly Service Fee</td>
                             <td class="amount-cell">K100 / Emp</td>
-                            <td class="select-cell"><input type="checkbox" name="service" value="NAPSA - Monthly Service Fee (K100 / Emp)" data-price="K100 / Emp"></td>
                         </tr>
                         <tr>
                             <td class="service-cell">Personal Account Upgrade</td>
                             <td class="amount-cell">K250</td>
-                            <td class="select-cell"><input type="checkbox" name="service" value="NAPSA - Personal Account Upgrade (K250)" data-price="K250"></td>
                         </tr>
 
                         <!-- ZPPA -->
@@ -1224,12 +1131,10 @@
                             <td class="category-cell" rowspan="2">ZPPA</td>
                             <td class="service-cell">New Registration</td>
                             <td class="amount-cell">K900</td>
-                            <td class="select-cell"><input type="checkbox" name="service" value="ZPPA - New Registration (K900)" data-price="K900"></td>
                         </tr>
                         <tr>
                             <td class="service-cell">Renewal</td>
                             <td class="amount-cell">K600</td>
-                            <td class="select-cell"><input type="checkbox" name="service" value="ZPPA - Renewal (K600)" data-price="K600"></td>
                         </tr>
 
                         <!-- WORKERS COMPENSATION -->
@@ -1237,12 +1142,10 @@
                             <td class="category-cell" rowspan="2">Workers Comp</td>
                             <td class="service-cell">New Registration</td>
                             <td class="amount-cell">K1,000</td>
-                            <td class="select-cell"><input type="checkbox" name="service" value="Workers Comp - New Registration (K1,000)" data-price="K1,000"></td>
                         </tr>
                         <tr>
                             <td class="service-cell">Renewal</td>
                             <td class="amount-cell">K1,000</td>
-                            <td class="select-cell"><input type="checkbox" name="service" value="Workers Comp - Renewal (K1,000)" data-price="K1,000"></td>
                         </tr>
 
                         <!-- NHIMA -->
@@ -1250,17 +1153,14 @@
                             <td class="category-cell" rowspan="3">NHIMA</td>
                             <td class="service-cell">Company Reg</td>
                             <td class="amount-cell">K1,000</td>
-                            <td class="select-cell"><input type="checkbox" name="service" value="NHIMA - Company Reg (K1,000)" data-price="K1,000"></td>
                         </tr>
                         <tr>
                             <td class="service-cell">Personal Reg</td>
                             <td class="amount-cell">K200</td>
-                            <td class="select-cell"><input type="checkbox" name="service" value="NHIMA - Personal Reg (K200)" data-price="K200"></td>
                         </tr>
                         <tr>
                             <td class="service-cell">Monthly Returns</td>
                             <td class="amount-cell">K50 / Emp</td>
-                            <td class="select-cell"><input type="checkbox" name="service" value="NHIMA - Monthly Returns (K50 / Emp)" data-price="K50 / Emp"></td>
                         </tr>
 
                         <!-- ONLINE MUSIC DISTRIBUTION -->
@@ -1268,22 +1168,9 @@
                             <td class="category-cell">Online Music</td>
                             <td class="service-cell">All Streaming Platforms</td>
                             <td class="amount-cell">K650</td>
-                            <td class="select-cell"><input type="checkbox" name="service" value="Online Music - All Streaming Platforms (K650)" data-price="K650"></td>
                         </tr>
                     </tbody>
                 </table>
-            </div>
-
-            <!-- BOOKING CONTAINER VIA WHATSAPP -->
-            <div class="booking-action-box">
-                <h4>Send Your Request via WhatsApp</h4>
-                <div class="form-control-group">
-                    <label for="clientName">Your Full Name / Business Name</label>
-                    <input type="text" id="clientName" placeholder="Enter your name or business name">
-                </div>
-                <button type="button" class="btn-whatsapp-send" onclick="sendWhatsAppBooking()">
-                    <i class="fa-brands fa-whatsapp" style="font-size: 20px;"></i> Send Selected Services to WhatsApp
-                </button>
             </div>
 
             <div class="note-box">
@@ -1449,29 +1336,6 @@
                 menu.classList.remove("active");
             }
         });
-
-        /* WHATSAPP SERVICE SELECTION & MESSAGING INTEGRATION */
-        function sendWhatsAppBooking() {
-            const clientNameInput = document.getElementById("clientName").value.trim();
-            const checkboxes = document.querySelectorAll('input[name="service"]:checked');
-            
-            if (checkboxes.length === 0) {
-                alert("Please select at least one service from the list before sending your request.");
-                return;
-            }
-
-            let selectedServicesText = "";
-            checkboxes.forEach((cb, index) => {
-                selectedServicesText += `%0A- ${cb.value}`;
-            });
-
-            const customerName = clientNameInput !== "" ? clientNameInput : "Valued Customer";
-            
-            let message = `Hello Lamjet Tech Solutions,%0A%0AMy name is *${customerName}*. I would like to register/request the following services:${selectedServicesText}%0A%0APlease guide me on the next steps. Thank you!`;
-            
-            let whatsappUrl = `https://wa.me/260971132818?text=${message}`;
-            window.open(whatsappUrl, '_blank');
-        }
 
         /* AUTOMATED & MANUAL SCROLLING SLIDER INTERNALS */
         let currentSlideIndex = 0;
