@@ -133,14 +133,14 @@
             color: #a8cf45;
         }
 
-        /* HERO */
+        /* HERO - SMALL HEIGHT & LEFT TEXT ALIGN */
         .hero {
-            min-height: 55vh;
+            min-height: 35vh;
             display: flex;
-            justify-content: center;
+            justify-content: flex-start;
             align-items: center;
-            text-align: center;
-            padding: 40px 20px;
+            text-align: left;
+            padding: 30px 5%;
             background: linear-gradient(rgba(0, 0, 0, .85), rgba(0, 0, 0, .85)),
                         url('https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=1600');
             background-size: cover;
@@ -148,8 +148,8 @@
         }
 
         .hero-content h1 {
-            font-size: 54px;
-            margin-bottom: 15px;
+            font-size: 42px;
+            margin-bottom: 10px;
         }
 
         .hero-content span {
@@ -157,11 +157,10 @@
         }
 
         .hero-content p {
-            max-width: 800px;
-            margin: auto;
-            margin-bottom: 25px;
+            max-width: 700px;
+            margin: 0 0 20px 0;
             color: #ddd;
-            font-size: 18px;
+            font-size: 16px;
         }
 
         .btn {
@@ -170,10 +169,10 @@
             color: #000;
             font-weight: 600;
             text-decoration: none;
-            padding: 12px 30px;
+            padding: 10px 25px;
             border-radius: 50px;
             transition: 0.3s;
-            margin: 5px;
+            margin: 5px 5px 5px 0;
             cursor: pointer;
             border: none;
         }
@@ -208,6 +207,44 @@
             background: #ffffff;
             color: #000;
             transform: translateY(-2px);
+        }
+
+        /* FLOATING CALL & WHATSAPP BUTTONS ON RIGHT CENTER */
+        .floating-contact-sidebar {
+            position: fixed;
+            right: 20px;
+            top: 50%;
+            transform: translateY(-50%);
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            z-index: 1500;
+        }
+
+        .float-icon-btn {
+            width: 55px;
+            height: 55px;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #fff;
+            font-size: 24px;
+            text-decoration: none;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .float-icon-btn:hover {
+            transform: scale(1.1);
+        }
+
+        .float-call {
+            background: #0ea5e9;
+        }
+
+        .float-whatsapp {
+            background: #25D366;
         }
 
         /* SECTIONS */
@@ -807,11 +844,21 @@
             }
 
             .hero-content h1 {
-                font-size: 34px;
+                font-size: 30px;
             }
 
             .hero-content p {
-                font-size: 15px;
+                font-size: 14px;
+            }
+
+            .floating-contact-sidebar {
+                right: 12px;
+            }
+
+            .float-icon-btn {
+                width: 48px;
+                height: 48px;
+                font-size: 20px;
             }
 
             .about {
@@ -918,6 +965,16 @@
             </ul>
         </nav>
     </header>
+
+    <!-- FLOATING SIDEBAR CONTACT BUTTONS (RIGHT CENTER) -->
+    <div class="floating-contact-sidebar">
+        <a href="tel:+260971132818" class="float-icon-btn float-call" title="Call Us">
+            <i class="fa-solid fa-phone"></i>
+        </a>
+        <a href="https://wa.me/260971132818" target="_blank" class="float-icon-btn float-whatsapp" title="Chat on WhatsApp">
+            <i class="fa-brands fa-whatsapp"></i>
+        </a>
+    </div>
 
     <section class="hero">
         <div class="hero-content">
